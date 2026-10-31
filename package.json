@@ -1,0 +1,31 @@
+{
+  "name": "article-quality-gate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Score markdown articles with deterministic checks plus an LLM judge, record each score against a hash of the text, and block a build when an article is unscored, edited since scoring, or below the bar.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22.9" },
+  "bin": { "article-gate": "src/cli.ts" },
+  "scripts": {
+    "quickstart": "npm run score -- --fresh && npm run calibrate && npm run check",
+    "score": "node --import tsx src/cli.ts score",
+    "check": "node --import tsx src/cli.ts check",
+    "check:strict": "node --import tsx src/cli.ts check --strict",
+    "calibrate": "node --import tsx src/cli.ts calibrate",
+    "stability": "node --import tsx src/cli.ts stability",
+    "prebuild": "npm run check:strict",
+    "build": "echo 'your site build goes here (prebuild ran the article gate first)'",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "0.6.0",
+    "gray-matter": "4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "contentDirs": ["samples/articles"],
+  "extensions": [".md", ".mdx"],
+  "ledgerPath": ".quality/article-scores.json",
+  "cachePath": ".quality/cache.json",
+  "reportDir": "reports",
+  "passScore": 8,
+  "passScoreByKind": { "company": 7 },
+  "reviewMargin": 1,
+  "calibrationFile": "calibration/goldens.json"
+}

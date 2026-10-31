@@ -1,0 +1,5 @@
+#!/bin/sh
+# Block a commit that changes a published article which is unscored, edited since it was
+# scored, or below the bar. Install: cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# Commit anyway: ARTICLE_GATE=warn git commit ...   (or git commit --no-verify)
+exec node --import tsx src/cli.ts check --staged

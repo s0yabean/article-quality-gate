@@ -1,0 +1,12 @@
+{
+  "note": "SYNTHETIC calibration set. Each item is a version of an article the author has already judged: rejected drafts and their approved rewrites. In a real project, pull these from git history (the version before a rewrite is a rejection, the version you published is an approval) and keep the reason you rejected it.",
+  "items": [
+    { "id": "01 first draft", "file": "calibration/versions/01-first-draft.md", "verdict": "reject", "reason": "Generic claims, no numbers, no first-hand evidence" },
+    { "id": "01 published", "file": "samples/articles/01-three-numbers-before-automating-quotes.md", "verdict": "approve", "reason": "Approved rewrite of the first draft" },
+    { "id": "02 published", "file": "samples/articles/02-bike-shop-quote-turnaround.md", "verdict": "approve", "reason": "Approved as written" },
+    { "id": "03 published", "file": "samples/articles/03-notes-from-a-month-of-call-logs.md", "verdict": "approve", "reason": "Approved after review: thin evidence, but honest about it" },
+    { "id": "04 hype listicle", "file": "samples/articles/04-ai-will-revolutionize-your-business.md", "verdict": "reject", "reason": "Hype, no evidence, ends on a plug" },
+    { "id": "05 before rewrite", "file": "samples/articles/05-testing-a-ticket-router.md", "verdict": "reject", "reason": "Well written, but ends with a CV-style skills list and 'DM me'" },
+    { "id": "05 rewrite", "file": "calibration/versions/05-testing-a-ticket-router-rewrite.md", "verdict": "approve", "reason": "Skills list replaced by a reusable method" }
+  ]
+}
