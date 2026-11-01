@@ -1,5 +1,7 @@
 # article-quality-gate
 
+[![CI](https://github.com/s0yabean/article-quality-gate/actions/workflows/ci.yml/badge.svg)](https://github.com/s0yabean/article-quality-gate/actions/workflows/ci.yml)
+
 A publishing gate for markdown articles: plain-code checks plus an LLM judge score each article out of
 10, each score is saved with a hash of the text it judged, and a `prebuild` check blocks the build when a
 published article is unscored, edited since it was scored, or below the bar. A calibration command checks
